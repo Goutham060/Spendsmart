@@ -1,0 +1,343 @@
+/* =========================================================
+   SPENDMATE - SIDEBAR
+   ========================================================= */
+
+.sidebar {
+  position: fixed;
+
+  top: 0;
+  left: 0;
+  bottom: 0;
+
+  width: 250px;
+
+  display: flex;
+  flex-direction: column;
+
+  background: #101c32;
+  color: #ffffff;
+
+  padding: 24px 16px;
+
+  z-index: 1000;
+
+  box-shadow: 3px 0 15px rgba(15, 23, 42, 0.08);
+}
+
+/* =========================================================
+   LOGO
+   ========================================================= */
+
+.sidebar-logo {
+  display: flex;
+  align-items: center;
+
+  gap: 11px;
+
+  padding: 5px 10px 27px;
+}
+
+.logo-icon {
+  width: 38px;
+  height: 38px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #2855d9;
+
+  border-radius: 10px;
+
+  color: #ffffff;
+
+  font-size: 20px;
+  font-weight: 700;
+
+  box-shadow:
+    0 5px 14px rgba(40, 85, 217, 0.3);
+}
+
+.logo-text {
+  display: flex;
+  flex-direction: column;
+
+  line-height: 1.05;
+}
+
+.logo-text span {
+  font-size: 13px;
+  font-weight: 500;
+
+  color: #ffffff;
+}
+
+.logo-text strong {
+  margin-top: 3px;
+
+  font-size: 14px;
+  font-weight: 700;
+
+  color: #ffffff;
+}
+
+/* =========================================================
+   NAVIGATION
+   ========================================================= */
+
+.sidebar-nav {
+  flex: 1;
+
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.nav-section-title {
+  padding: 0 11px;
+
+  margin-bottom: 9px;
+
+  color: #6f7c94;
+
+  font-size: 9px;
+  font-weight: 700;
+
+  letter-spacing: 0.9px;
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+
+  gap: 12px;
+
+  width: 100%;
+
+  padding: 11px 12px;
+
+  margin-bottom: 4px;
+
+  border-radius: 8px;
+
+  color: #aeb8ca;
+
+  font-size: 12px;
+  font-weight: 500;
+
+  transition:
+    background 0.2s ease,
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.nav-item svg {
+  flex-shrink: 0;
+}
+
+.nav-item:hover {
+  background: rgba(255, 255, 255, 0.06);
+
+  color: #ffffff;
+
+  transform: translateX(2px);
+}
+
+.nav-item.active {
+  background: #2855d9;
+
+  color: #ffffff;
+
+  box-shadow:
+    0 5px 14px rgba(40, 85, 217, 0.25);
+}
+
+.nav-item.active:hover {
+  background: #2855d9;
+  transform: none;
+}
+
+/* =========================================================
+   DIVIDER
+   ========================================================= */
+
+.sidebar-divider {
+  height: 1px;
+
+  background: rgba(255, 255, 255, 0.08);
+
+  margin: 19px 8px 20px;
+}
+
+/* =========================================================
+   BOTTOM
+   ========================================================= */
+
+.sidebar-bottom {
+  padding-top: 15px;
+
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* =========================================================
+   DARK MODE ROW
+   ========================================================= */
+
+.dark-mode-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 10px 10px 14px;
+}
+
+.dark-mode-label {
+  display: flex;
+  align-items: center;
+
+  gap: 10px;
+
+  color: #aeb8ca;
+
+  font-size: 11px;
+}
+
+.dark-mode-label svg {
+  flex-shrink: 0;
+}
+
+/* =========================================================
+   TOGGLE
+   ========================================================= */
+
+.toggle-switch {
+  position: relative;
+
+  width: 35px;
+  height: 20px;
+
+  padding: 0;
+
+  border: 1px solid #45516a;
+
+  border-radius: 20px;
+
+  background: #26334c;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.toggle-switch span {
+  position: absolute;
+
+  top: 3px;
+  left: 3px;
+
+  width: 12px;
+  height: 12px;
+
+  border-radius: 50%;
+
+  background: #ffffff;
+
+  transition:
+    transform 0.2s ease,
+    left 0.2s ease;
+}
+
+/* ON STATE
+   IMPORTANT: OUTSIDE MEDIA QUERY
+*/
+
+.toggle-switch.on {
+  background: #3155e7;
+
+  border-color: #3155e7;
+}
+
+.toggle-switch.on span {
+  transform: translateX(15px);
+}
+
+/* =========================================================
+   TOGGLE FOCUS
+   ========================================================= */
+
+.toggle-switch:focus-visible {
+  outline: 2px solid #7e9aff;
+  outline-offset: 2px;
+}
+
+/* =========================================================
+   LOGOUT
+   ========================================================= */
+
+.logout-button {
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+
+  gap: 11px;
+
+  padding: 10px 10px;
+
+  border: none;
+
+  background: transparent;
+
+  color: #ef6267;
+
+  font-size: 11px;
+  font-weight: 600;
+
+  text-align: left;
+
+  border-radius: 8px;
+
+  transition:
+    background 0.2s ease;
+}
+
+.logout-button:hover {
+  background: rgba(239, 98, 103, 0.08);
+}
+
+/* =========================================================
+   SCROLLBAR
+   ========================================================= */
+
+.sidebar-nav::-webkit-scrollbar {
+  width: 4px;
+}
+
+.sidebar-nav::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.sidebar-nav::-webkit-scrollbar-thumb {
+  background: #2d3b54;
+  border-radius: 10px;
+}
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 768px) {
+  .sidebar {
+    width: 220px;
+
+    transform: translateX(-100%);
+
+    transition:
+      transform 0.25s ease;
+  }
+
+  .sidebar.mobile-open {
+    transform: translateX(0);
+  }
+}

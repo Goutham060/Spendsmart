@@ -1,0 +1,372 @@
+/* =========================================
+   SPENDMATE - SETTINGS
+========================================= */
+
+.settings-page {
+  padding: 32px;
+  background: #f6f8fc;
+  min-height: calc(100vh - 70px);
+  color: #172033;
+}
+
+/* =========================================
+   HEADER
+========================================= */
+
+.settings-header {
+  margin-bottom: 26px;
+}
+
+.settings-header h1 {
+  margin: 0;
+  color: #172033;
+  font-size: 26px;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+.settings-header p {
+  margin: 6px 0 0;
+  color: #7d8798;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+/* =========================================
+   CONTAINER
+========================================= */
+
+.settings-container {
+  width: min(850px, 100%);
+  background: #ffffff;
+  border: 1px solid #e7eaf0;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 3px 10px rgba(20, 30, 50, 0.035);
+}
+
+/* =========================================
+   SUCCESS MESSAGE
+========================================= */
+
+.settings-success {
+  margin: 18px 20px 0;
+  padding: 10px 12px;
+  background: #ecfdf5;
+  border: 1px solid #ccefe1;
+  border-radius: 8px;
+  color: #159570;
+  font-size: 11px;
+}
+
+/* =========================================
+   SETTINGS SECTION
+========================================= */
+
+.settings-section {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  padding: 24px 22px;
+  border-bottom: 1px solid #edf0f4;
+}
+
+.settings-section:last-child {
+  border-bottom: none;
+}
+
+.settings-section-icon {
+  width: 40px;
+  height: 40px;
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #eef2ff;
+  color: #3155e7;
+  border-radius: 10px;
+}
+
+.settings-section-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.settings-section-content h2 {
+  margin: 0;
+  color: #172033;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.settings-section-content p {
+  margin: 5px 0 13px;
+  color: #929aaa;
+  font-size: 11px;
+  line-height: 1.5;
+}
+
+/* =========================================
+   SELECT
+========================================= */
+
+.settings-section-content select {
+  width: min(300px, 100%);
+  padding: 10px 12px;
+
+  border: 1px solid #dfe3ea;
+  border-radius: 8px;
+
+  outline: none;
+
+  background: #ffffff;
+  color: #344054;
+
+  font-size: 12px;
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    background 0.2s ease;
+}
+
+.settings-section-content select:focus {
+  border-color: #3155e7;
+  box-shadow: 0 0 0 3px rgba(49, 85, 231, 0.08);
+}
+
+/* =========================================
+   TOGGLE SECTION
+========================================= */
+
+.settings-toggle-section {
+  align-items: center;
+}
+
+.settings-toggle-section .settings-section-content p {
+  margin-bottom: 0;
+}
+
+/* =========================================
+   TOGGLE
+========================================= */
+
+.settings-toggle {
+  position: relative;
+
+  width: 45px;
+  height: 24px;
+
+  flex-shrink: 0;
+
+  padding: 0;
+
+  border: none;
+  border-radius: 20px;
+
+  background: #d7dce5;
+
+  cursor: pointer;
+
+  transition: background 0.2s ease;
+}
+
+.settings-toggle span {
+  position: absolute;
+
+  top: 3px;
+  left: 3px;
+
+  width: 18px;
+  height: 18px;
+
+  background: #ffffff;
+  border-radius: 50%;
+
+  transition: transform 0.2s ease;
+
+  box-shadow:
+    0 1px 3px rgba(0, 0, 0, 0.15);
+}
+
+.settings-toggle.on {
+  background: #3155e7;
+}
+
+.settings-toggle.on span {
+  transform: translateX(21px);
+}
+
+/* =========================================
+   TOGGLE ACCESSIBILITY
+========================================= */
+
+.settings-toggle:focus-visible {
+  outline: 3px solid rgba(49, 85, 231, 0.25);
+  outline-offset: 2px;
+}
+
+/* =========================================
+   ACTIONS
+========================================= */
+
+.settings-actions {
+  display: flex;
+  justify-content: flex-end;
+  padding: 20px 22px;
+}
+
+.settings-save-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  padding: 11px 17px;
+
+  border: none;
+  border-radius: 8px;
+
+  background: #3155e7;
+  color: #ffffff;
+
+  font-size: 12px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+.settings-save-btn:hover {
+  background: #2444c9;
+  transform: translateY(-1px);
+}
+
+/* =========================================
+   DARK MODE
+========================================= */
+
+body.dark-mode .settings-page {
+  background: #0f141c !important;
+  color: #e8edf5 !important;
+}
+
+body.dark-mode .settings-header h1 {
+  color: #f3f5f8 !important;
+}
+
+body.dark-mode .settings-header p {
+  color: #9ca7b8 !important;
+}
+
+body.dark-mode .settings-container {
+  background: #171e28 !important;
+  border-color: #283241 !important;
+  box-shadow:
+    0 8px 24px rgba(0, 0, 0, 0.22) !important;
+}
+
+body.dark-mode .settings-section {
+  background: #171e28 !important;
+  border-color: #283241 !important;
+}
+
+body.dark-mode .settings-section-icon {
+  background: #20283a !important;
+  color: #7e9aff !important;
+}
+
+body.dark-mode .settings-section-content h2 {
+  color: #f3f5f8 !important;
+}
+
+body.dark-mode .settings-section-content p {
+  color: #9ca8b8 !important;
+}
+
+/* =========================================
+   DARK MODE SELECT
+========================================= */
+
+body.dark-mode .settings-section-content select {
+  background: #111821 !important;
+  color: #e8edf5 !important;
+  border-color: #354152 !important;
+}
+
+body.dark-mode .settings-section-content select:focus {
+  border-color: #3155e7 !important;
+  box-shadow:
+    0 0 0 3px rgba(49, 85, 231, 0.18) !important;
+}
+
+body.dark-mode .settings-section-content option {
+  background: #111821 !important;
+  color: #e8edf5 !important;
+}
+
+/* =========================================
+   DARK MODE SUCCESS
+========================================= */
+
+body.dark-mode .settings-success {
+  background: rgba(21, 149, 112, 0.12) !important;
+  border-color: rgba(21, 149, 112, 0.25) !important;
+  color: #6ee7b7 !important;
+}
+
+/* =========================================
+   DARK MODE TOGGLE
+========================================= */
+
+body.dark-mode .settings-toggle {
+  background: #394454 !important;
+}
+
+body.dark-mode .settings-toggle.on {
+  background: #3155e7 !important;
+}
+
+body.dark-mode .settings-toggle span {
+  background: #ffffff !important;
+}
+
+/* =========================================
+   DARK MODE SAVE BUTTON
+========================================= */
+
+body.dark-mode .settings-save-btn {
+  background: #3155e7 !important;
+  color: #ffffff !important;
+}
+
+body.dark-mode .settings-save-btn:hover {
+  background: #2444c9 !important;
+}
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 600px) {
+  .settings-page {
+    padding: 18px;
+  }
+
+  .settings-section {
+    padding: 20px 16px;
+  }
+
+  .settings-actions {
+    padding: 18px 16px;
+  }
+
+  .settings-save-btn {
+    width: 100%;
+  }
+}

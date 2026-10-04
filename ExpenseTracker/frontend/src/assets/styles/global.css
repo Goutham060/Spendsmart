@@ -1,0 +1,1232 @@
+/* =========================================================
+   SPENDMATE
+   GLOBAL STYLES
+   ========================================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+/* =========================================================
+   RESET
+   ========================================================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: #f6f8fc;
+  color: #172033;
+  min-width: 320px;
+}
+
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+/* =========================================================
+   ROOT
+   ========================================================= */
+
+#root {
+  min-height: 100vh;
+}
+
+/* =========================================================
+   APP LAYOUT
+   ========================================================= */
+
+.app-layout {
+  display: flex;
+  min-height: 100vh;
+  background: #f6f8fc;
+}
+
+.main-content {
+  flex: 1;
+  min-width: 0;
+  min-height: 100vh;
+  margin-left: 250px;
+  padding: 28px 32px;
+}
+
+/* =========================================================
+   PAGE
+   ========================================================= */
+
+.page-container {
+  width: 100%;
+  max-width: 1500px;
+  margin: 0 auto;
+}
+
+.page-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 24px;
+}
+
+.page-title {
+  color: #172033;
+  font-size: 26px;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+.page-subtitle {
+  margin-top: 5px;
+  color: #7b8497;
+  font-size: 13px;
+}
+
+/* =========================================================
+   BUTTONS
+   ========================================================= */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  border: none;
+  border-radius: 8px;
+
+  padding: 11px 17px;
+
+  font-size: 13px;
+  font-weight: 600;
+
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.btn-primary {
+  background: #2855d9;
+  color: #ffffff;
+}
+
+.btn-primary:hover {
+  background: #2148bd;
+  transform: translateY(-1px);
+  box-shadow: 0 5px 12px rgba(40, 85, 217, 0.2);
+}
+
+.btn-secondary {
+  background: #ffffff;
+  color: #344054;
+  border: 1px solid #dfe4ec;
+}
+
+.btn-secondary:hover {
+  background: #f8f9fb;
+}
+
+.btn-danger {
+  background: #fff0f1;
+  color: #df454b;
+}
+
+.btn-danger:hover {
+  background: #ffe3e5;
+}
+
+.btn-success {
+  background: #eaf8f2;
+  color: #159570;
+}
+
+/* =========================================================
+   CARDS
+   ========================================================= */
+
+.card {
+  background: #ffffff;
+  border: 1px solid #e9edf4;
+  border-radius: 14px;
+  box-shadow: 0 3px 12px rgba(25, 42, 70, 0.04);
+}
+
+.card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 19px 21px;
+
+  border-bottom: 1px solid #edf0f5;
+}
+
+.card-title {
+  color: #172033;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.card-subtitle {
+  margin-top: 4px;
+  color: #8b93a5;
+  font-size: 11px;
+}
+
+.card-body {
+  padding: 21px;
+}
+
+/* =========================================================
+   FORMS
+   ========================================================= */
+
+.form-group {
+  margin-bottom: 18px;
+}
+
+.form-label {
+  display: block;
+  margin-bottom: 7px;
+
+  color: #344054;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.form-input,
+.form-select,
+.form-textarea {
+  width: 100%;
+
+  border: 1px solid #dfe4ec;
+  border-radius: 8px;
+
+  background: #ffffff;
+  color: #172033;
+
+  padding: 11px 13px;
+
+  outline: none;
+
+  font-size: 13px;
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.form-input::placeholder,
+.form-textarea::placeholder {
+  color: #a0a8b7;
+}
+
+.form-input:focus,
+.form-select:focus,
+.form-textarea:focus {
+  border-color: #2855d9;
+  box-shadow: 0 0 0 3px rgba(40, 85, 217, 0.08);
+}
+
+.form-textarea {
+  min-height: 110px;
+  resize: vertical;
+}
+
+/* =========================================================
+   SEARCH
+   ========================================================= */
+
+.search-box {
+  position: relative;
+  width: 280px;
+}
+
+.search-box input {
+  width: 100%;
+
+  border: 1px solid #dfe4ec;
+  border-radius: 8px;
+
+  background: #ffffff;
+
+  padding: 10px 13px 10px 37px;
+
+  outline: none;
+
+  font-size: 12px;
+}
+
+.search-box input:focus {
+  border-color: #2855d9;
+}
+
+.search-icon {
+  position: absolute;
+  left: 13px;
+  top: 50%;
+
+  transform: translateY(-50%);
+
+  color: #8b93a5;
+}
+
+/* =========================================================
+   TABLES
+   ========================================================= */
+
+.table-container {
+  width: 100%;
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th {
+  padding: 13px 15px;
+
+  background: #fafbfc;
+
+  color: #737d90;
+
+  font-size: 11px;
+  font-weight: 600;
+
+  text-align: left;
+  white-space: nowrap;
+}
+
+td {
+  padding: 15px;
+
+  border-top: 1px solid #edf0f5;
+
+  color: #344054;
+
+  font-size: 12px;
+}
+
+tbody tr {
+  transition: background 0.15s ease;
+}
+
+tbody tr:hover {
+  background: #fafbff;
+}
+
+/* =========================================================
+   BADGES
+   ========================================================= */
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+
+  padding: 5px 9px;
+
+  border-radius: 6px;
+
+  font-size: 10px;
+  font-weight: 600;
+}
+
+.badge-blue {
+  background: #eef3ff;
+  color: #2855d9;
+}
+
+.badge-green {
+  background: #eaf8f2;
+  color: #159570;
+}
+
+.badge-red {
+  background: #fff0f1;
+  color: #df454b;
+}
+
+.badge-orange {
+  background: #fff5e7;
+  color: #d98616;
+}
+
+.badge-purple {
+  background: #f3efff;
+  color: #7357c8;
+}
+
+/* =========================================================
+   AMOUNTS
+   ========================================================= */
+
+.amount-income {
+  color: #159570;
+  font-weight: 700;
+}
+
+.amount-expense {
+  color: #df454b;
+  font-weight: 700;
+}
+
+.amount-neutral {
+  color: #2855d9;
+  font-weight: 700;
+}
+
+/* =========================================================
+   STAT CARDS
+   ========================================================= */
+
+.stats-grid {
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 16px;
+
+  margin-bottom: 20px;
+}
+
+.stat-card {
+  background: #ffffff;
+
+  border: 1px solid #e9edf4;
+  border-radius: 14px;
+
+  padding: 19px;
+
+  box-shadow: 0 3px 12px rgba(25, 42, 70, 0.04);
+}
+
+.stat-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin-bottom: 14px;
+}
+
+.stat-label {
+  color: #7b8497;
+
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.stat-value {
+  color: #172033;
+
+  font-size: 23px;
+  font-weight: 700;
+}
+
+.stat-change {
+  margin-top: 8px;
+
+  font-size: 10px;
+  font-weight: 600;
+}
+
+.stat-change.positive {
+  color: #159570;
+}
+
+.stat-change.negative {
+  color: #df454b;
+}
+
+.stat-icon {
+  width: 38px;
+  height: 38px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 10px;
+
+  font-size: 17px;
+}
+
+.stat-icon.blue {
+  background: #eef3ff;
+  color: #2855d9;
+}
+
+.stat-icon.green {
+  background: #eaf8f2;
+  color: #159570;
+}
+
+.stat-icon.red {
+  background: #fff0f1;
+  color: #df454b;
+}
+
+.stat-icon.orange {
+  background: #fff5e7;
+  color: #df8a19;
+}
+
+/* =========================================================
+   DASHBOARD GRID
+   ========================================================= */
+
+.dashboard-grid {
+  display: grid;
+
+  grid-template-columns: 1.6fr 1fr;
+
+  gap: 18px;
+
+  margin-bottom: 20px;
+}
+
+.dashboard-full {
+  width: 100%;
+}
+
+/* =========================================================
+   ALERTS
+   ========================================================= */
+
+.alert {
+  padding: 12px 15px;
+
+  border-radius: 8px;
+
+  margin-bottom: 15px;
+
+  font-size: 12px;
+}
+
+.alert-success {
+  background: #eaf8f2;
+  color: #13795b;
+}
+
+.alert-error {
+  background: #fff0f1;
+  color: #c9343b;
+}
+
+.alert-warning {
+  background: #fff6e8;
+  color: #a7660e;
+}
+
+.alert-info {
+  background: #eef3ff;
+  color: #2855d9;
+}
+
+/* =========================================================
+   EMPTY STATE
+   ========================================================= */
+
+.empty-state {
+  padding: 50px 20px;
+
+  text-align: center;
+
+  color: #8b93a5;
+}
+
+.empty-state-icon {
+  margin-bottom: 12px;
+
+  font-size: 36px;
+}
+
+.empty-state h3 {
+  margin-bottom: 6px;
+
+  color: #344054;
+
+  font-size: 15px;
+}
+
+.empty-state p {
+  font-size: 12px;
+}
+
+/* =========================================================
+   LOADING
+   ========================================================= */
+
+.loading-container {
+  min-height: 300px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.spinner {
+  width: 32px;
+  height: 32px;
+
+  border: 3px solid #e3e8f1;
+  border-top-color: #2855d9;
+
+  border-radius: 50%;
+
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* =========================================================
+   SCROLLBAR
+   ========================================================= */
+
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f5f6f8;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cbd1dc;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #aeb6c4;
+}
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 1100px) {
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .dashboard-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .main-content {
+    margin-left: 0;
+    padding: 20px 15px;
+  }
+
+  .page-header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .search-box {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .main-content {
+    padding: 15px 12px;
+  }
+
+  .page-title {
+    font-size: 22px;
+  }
+
+  .stat-value {
+    font-size: 21px;
+  }
+
+  .card-body {
+    padding: 16px;
+  }
+}
+
+/* =========================================================
+   SPENDMATE GLOBAL DARK MODE
+   IMPORTANT: THIS IS OUTSIDE ALL MEDIA QUERIES
+   ========================================================= */
+
+body.dark-mode {
+  background: #0f141c !important;
+  color: #e8edf5 !important;
+}
+
+body.dark-mode #root {
+  background: #0f141c !important;
+  min-height: 100vh;
+}
+
+body.dark-mode .app-layout {
+  background: #0f141c !important;
+}
+
+body.dark-mode .main-content {
+  background: #0f141c !important;
+}
+
+/* =========================================================
+   COMMON PAGE BACKGROUNDS
+   ========================================================= */
+
+body.dark-mode .dashboard,
+body.dark-mode .dashboard-page,
+body.dark-mode .expenses-page,
+body.dark-mode .income-page,
+body.dark-mode .reports-page,
+body.dark-mode .budgets-page,
+body.dark-mode .savings-page,
+body.dark-mode .savings-goals-page,
+body.dark-mode .categories-page,
+body.dark-mode .profile-page,
+body.dark-mode .receipt-page,
+body.dark-mode .add-expense-page,
+body.dark-mode .settings-page {
+  background: #0f141c !important;
+  color: #e8edf5 !important;
+}
+
+/* =========================================================
+   HEADINGS
+   ========================================================= */
+
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3,
+body.dark-mode h4,
+body.dark-mode h5,
+body.dark-mode strong,
+body.dark-mode label {
+  color: #edf2f7 !important;
+}
+
+/* =========================================================
+   SECONDARY TEXT
+   ========================================================= */
+
+body.dark-mode p,
+body.dark-mode small {
+  color: #9ca8b8;
+}
+
+/* =========================================================
+   COMMON CARDS
+   ========================================================= */
+
+body.dark-mode .card,
+body.dark-mode .stat-card,
+body.dark-mode .summary-card,
+body.dark-mode .expense-summary-card,
+body.dark-mode .income-summary-card,
+body.dark-mode .report-summary-card,
+body.dark-mode .budget-summary-card,
+body.dark-mode .savings-summary-card,
+body.dark-mode .category-summary-card,
+body.dark-mode .chart-card,
+body.dark-mode .report-card,
+body.dark-mode .transactions-card,
+body.dark-mode .expenses-table-card,
+body.dark-mode .income-table-card,
+body.dark-mode .budget-card,
+body.dark-mode .savings-card,
+body.dark-mode .category-card,
+body.dark-mode .profile-card,
+body.dark-mode .receipt-upload-card,
+body.dark-mode .receipt-preview-card,
+body.dark-mode .receipt-details-card,
+body.dark-mode .form-card,
+body.dark-mode .smart-insight-card,
+body.dark-mode .dashboard-insight-card {
+  background: #171e28 !important;
+  border-color: #283241 !important;
+  color: #e8edf5 !important;
+  box-shadow:
+    0 8px 24px rgba(0, 0, 0, 0.22) !important;
+}
+
+/* =========================================================
+   CARD HEADERS / TOOLBARS
+   ========================================================= */
+
+body.dark-mode .card-header,
+body.dark-mode .expense-toolbar,
+body.dark-mode .income-toolbar,
+body.dark-mode .expenses-table-header,
+body.dark-mode .income-table-header,
+body.dark-mode .report-card-header,
+body.dark-mode .budget-section-header,
+body.dark-mode .categories-section-header,
+body.dark-mode .savings-section-header {
+  border-color: #283241 !important;
+}
+
+/* =========================================================
+   TABLES
+   ========================================================= */
+
+body.dark-mode .expense-table,
+body.dark-mode .income-table,
+body.dark-mode table {
+  background: #171e28 !important;
+}
+
+body.dark-mode .expense-table-row,
+body.dark-mode .income-table-row,
+body.dark-mode td {
+  border-color: #283241 !important;
+}
+
+body.dark-mode .expense-table-heading,
+body.dark-mode .income-table-heading,
+body.dark-mode th {
+  background: #131923 !important;
+}
+
+body.dark-mode .expense-table-heading span,
+body.dark-mode .income-table-heading span,
+body.dark-mode th {
+  color: #aeb9c8 !important;
+}
+
+body.dark-mode .expense-category,
+body.dark-mode .income-source,
+body.dark-mode td {
+  color: #b8c2cf !important;
+}
+
+body.dark-mode .expense-date,
+body.dark-mode .income-date,
+body.dark-mode .expense-payment,
+body.dark-mode .income-payment {
+  color: #929eae !important;
+}
+
+body.dark-mode tbody tr:hover {
+  background: #1c2531 !important;
+}
+
+/* =========================================================
+   INPUTS / SELECTS / TEXTAREA
+   ========================================================= */
+
+body.dark-mode input,
+body.dark-mode textarea,
+body.dark-mode select,
+body.dark-mode .form-input,
+body.dark-mode .form-select,
+body.dark-mode .form-textarea {
+  background: #111821 !important;
+  color: #e8edf5 !important;
+  border-color: #354152 !important;
+}
+
+body.dark-mode input::placeholder,
+body.dark-mode textarea::placeholder {
+  color: #718096 !important;
+}
+
+body.dark-mode input:focus,
+body.dark-mode textarea:focus,
+body.dark-mode select:focus {
+  border-color: #3155e7 !important;
+  box-shadow:
+    0 0 0 3px rgba(49, 85, 231, 0.18) !important;
+}
+
+body.dark-mode option {
+  background: #111821 !important;
+  color: #e8edf5 !important;
+}
+
+/* =========================================================
+   SEARCH
+   ========================================================= */
+
+body.dark-mode .search-box input,
+body.dark-mode .expense-search,
+body.dark-mode .income-search,
+body.dark-mode .navbar-search {
+  background: #111821 !important;
+  border-color: #354152 !important;
+  color: #e8edf5 !important;
+}
+
+body.dark-mode .search-box input::placeholder,
+body.dark-mode .navbar-search input::placeholder {
+  color: #718096 !important;
+}
+
+body.dark-mode .expense-search svg,
+body.dark-mode .income-search svg,
+body.dark-mode .navbar-search svg,
+body.dark-mode .search-icon {
+  color: #8794a6 !important;
+}
+
+/* =========================================================
+   BUTTONS
+   ========================================================= */
+
+body.dark-mode .btn-secondary,
+body.dark-mode .filter-button,
+body.dark-mode .sort-button,
+body.dark-mode .cancel-button,
+body.dark-mode .category-cancel-btn,
+body.dark-mode .budget-cancel-btn,
+body.dark-mode .goal-cancel-btn,
+body.dark-mode .income-cancel-btn,
+body.dark-mode .receipt-cancel-btn {
+  background: #202935 !important;
+  color: #d6deea !important;
+  border-color: #354152 !important;
+}
+
+body.dark-mode .btn-secondary:hover,
+body.dark-mode .filter-button:hover,
+body.dark-mode .sort-button:hover {
+  background: #273241 !important;
+}
+
+/* =========================================================
+   ACTION MENUS
+   ========================================================= */
+
+body.dark-mode .expense-action-menu,
+body.dark-mode .income-action-menu,
+body.dark-mode .budget-action-menu,
+body.dark-mode .category-action-menu,
+body.dark-mode .goal-action-menu {
+  background: #1b232e !important;
+  border-color: #354152 !important;
+  box-shadow:
+    0 12px 28px rgba(0, 0, 0, 0.35) !important;
+}
+
+body.dark-mode .expense-action-item,
+body.dark-mode .income-action-item,
+body.dark-mode .budget-action-item,
+body.dark-mode .category-action-item,
+body.dark-mode .goal-action-item {
+  color: #dbe3ee !important;
+}
+
+body.dark-mode .expense-action-item:hover,
+body.dark-mode .income-action-item:hover,
+body.dark-mode .budget-action-item:hover,
+body.dark-mode .category-action-item:hover,
+body.dark-mode .goal-action-item:hover {
+  background: #242e3b !important;
+}
+
+/* =========================================================
+   MORE / ICON BUTTONS
+   ========================================================= */
+
+body.dark-mode .expense-more,
+body.dark-mode .income-more,
+body.dark-mode .budget-more,
+body.dark-mode .category-more,
+body.dark-mode .goal-more,
+body.dark-mode .more-btn {
+  color: #aab5c4 !important;
+}
+
+body.dark-mode .expense-more:hover,
+body.dark-mode .income-more:hover,
+body.dark-mode .budget-more:hover,
+body.dark-mode .category-more:hover,
+body.dark-mode .goal-more:hover {
+  background: #252f3c !important;
+}
+
+/* =========================================================
+   MODALS
+   ========================================================= */
+
+body.dark-mode .category-modal-overlay,
+body.dark-mode .budget-modal-overlay,
+body.dark-mode .goal-modal-overlay,
+body.dark-mode .income-modal-overlay {
+  background: rgba(0, 0, 0, 0.72) !important;
+}
+
+body.dark-mode .category-modal,
+body.dark-mode .budget-modal,
+body.dark-mode .goal-modal,
+body.dark-mode .income-modal {
+  background: #171e28 !important;
+  border-color: #303b4a !important;
+  color: #e8edf5 !important;
+  box-shadow:
+    0 24px 60px rgba(0, 0, 0, 0.45) !important;
+}
+
+body.dark-mode .category-modal-header,
+body.dark-mode .budget-modal-header,
+body.dark-mode .goal-modal-header,
+body.dark-mode .income-modal-header {
+  border-color: #283241 !important;
+}
+
+body.dark-mode .category-close-btn,
+body.dark-mode .budget-close-btn,
+body.dark-mode .goal-close-btn,
+body.dark-mode .income-close-btn {
+  color: #aeb9c8 !important;
+}
+
+body.dark-mode .category-close-btn:hover,
+body.dark-mode .budget-close-btn:hover,
+body.dark-mode .goal-close-btn:hover,
+body.dark-mode .income-close-btn:hover {
+  background: #252f3c !important;
+}
+
+/* =========================================================
+   PROGRESS TRACKS
+   ========================================================= */
+
+body.dark-mode .budget-progress-track,
+body.dark-mode .goal-progress-track,
+body.dark-mode .progress-track {
+  background: #2b3543 !important;
+}
+
+/* =========================================================
+   RECEIPT SCANNER
+   ========================================================= */
+
+body.dark-mode .receipt-placeholder {
+  background: #111821 !important;
+  border-color: #354152 !important;
+  color: #8996a8 !important;
+}
+
+body.dark-mode .receipt-ocr-box {
+  background: #111821 !important;
+  border-color: #354152 !important;
+}
+
+body.dark-mode .receipt-ocr-box pre {
+  color: #c6d0dc !important;
+}
+
+/* =========================================================
+   PROFILE
+   ========================================================= */
+
+body.dark-mode .profile-input {
+  background: #111821 !important;
+  border-color: #354152 !important;
+}
+
+body.dark-mode .profile-input svg {
+  color: #8491a3 !important;
+}
+
+body.dark-mode .profile-success {
+  background: rgba(21, 149, 112, 0.12) !important;
+  border-color: rgba(21, 149, 112, 0.25) !important;
+}
+
+/* =========================================================
+   CHARTS - RECHARTS
+   ========================================================= */
+
+body.dark-mode .recharts-cartesian-axis-tick-value {
+  fill: #8996a8 !important;
+}
+
+body.dark-mode .recharts-text {
+  fill: #8996a8 !important;
+}
+
+body.dark-mode .recharts-cartesian-grid line {
+  stroke: #2b3543 !important;
+}
+
+body.dark-mode .recharts-legend-item-text {
+  color: #b6c1cf !important;
+}
+
+body.dark-mode .recharts-default-tooltip {
+  background: #1b232e !important;
+  border: 1px solid #354152 !important;
+  box-shadow:
+    0 10px 30px rgba(0, 0, 0, 0.35) !important;
+}
+
+body.dark-mode .recharts-tooltip-label {
+  color: #edf2f7 !important;
+}
+
+/* =========================================================
+   DASHBOARD / SMART INSIGHT
+   ========================================================= */
+
+body.dark-mode .dashboard-insight,
+body.dark-mode .smart-insight-card {
+  background: #1b232e !important;
+  border-color: #303b4a !important;
+}
+
+body.dark-mode .dashboard-insight p,
+body.dark-mode .smart-insight-card p {
+  color: #a7b2c1 !important;
+}
+
+/* =========================================================
+   EMPTY STATES
+   ========================================================= */
+
+body.dark-mode .chart-empty,
+body.dark-mode .no-expenses,
+body.dark-mode .no-income,
+body.dark-mode .no-budgets,
+body.dark-mode .no-goals,
+body.dark-mode .empty-state {
+  color: #8996a8 !important;
+}
+
+body.dark-mode .empty-state h3 {
+  color: #dce4ee !important;
+}
+
+/* =========================================================
+   LINKS
+   ========================================================= */
+
+body.dark-mode a {
+  color: #7e9aff;
+}
+
+body.dark-mode a:hover {
+  color: #9aadff;
+}
+
+/* =========================================================
+   DIVIDERS
+   ========================================================= */
+
+body.dark-mode hr {
+  border-color: #283241 !important;
+}
+
+/* =========================================================
+   NOTIFICATIONS
+   ========================================================= */
+
+body.dark-mode .notification-panel {
+  background: #1a2130 !important;
+  border-color: #343d4f !important;
+  color: #e8edf5 !important;
+}
+
+body.dark-mode .notification-panel-header,
+body.dark-mode .notification-item {
+  border-color: #2b3445 !important;
+}
+
+body.dark-mode .notification-panel-header h3,
+body.dark-mode .notification-item-content strong {
+  color: #f3f5f8 !important;
+}
+
+body.dark-mode .notification-panel-header p,
+body.dark-mode .notification-item-content p {
+  color: #b8c2cf !important;
+}
+
+body.dark-mode .notification-item-content span {
+  color: #7f899c !important;
+}
+
+body.dark-mode .notification-empty {
+  color: #8996a8 !important;
+}
+
+/* =========================================================
+   SIDEBAR
+   ========================================================= */
+
+body.dark-mode .sidebar {
+  background: #111821 !important;
+  border-right-color: #222c38 !important;
+}
+
+/* =========================================================
+   SETTINGS
+   ========================================================= */
+
+body.dark-mode .settings-success {
+  background: rgba(21, 149, 112, 0.12) !important;
+  border-color: rgba(21, 149, 112, 0.25) !important;
+  color: #6ee7b7 !important;
+}
+
+/* =========================================================
+   SCROLLBAR - DARK MODE
+   ========================================================= */
+
+body.dark-mode {
+  scrollbar-color: #394454 #151b24;
+}
+
+body.dark-mode * {
+  scrollbar-color: #394454 #151b24;
+}
+
+body.dark-mode ::-webkit-scrollbar-track {
+  background: #151b24;
+}
+
+body.dark-mode ::-webkit-scrollbar-thumb {
+  background: #394454;
+  border-radius: 10px;
+}
+
+body.dark-mode ::-webkit-scrollbar-thumb:hover {
+  background: #4a5668;
+}

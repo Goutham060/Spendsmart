@@ -1,0 +1,266 @@
+.add-expense-page {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 8px 0 40px;
+}
+
+.add-expense-header {
+  margin-bottom: 24px;
+}
+
+.back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  color: #6f7890;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 18px;
+  transition: 0.2s;
+}
+
+.back-link:hover {
+  color: #3155e7;
+}
+
+.add-expense-header h1 {
+  margin: 0;
+  color: #172033;
+  font-size: 30px;
+  font-weight: 750;
+}
+
+.add-expense-header p {
+  margin: 7px 0 0;
+  color: #7b8497;
+  font-size: 15px;
+}
+
+
+/* SUCCESS MESSAGE */
+
+.success-message {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  background: #eaf8f2;
+  border: 1px solid #c7eedc;
+  color: #159570;
+  padding: 13px 16px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+
+/* FORM CARD */
+
+.form-card {
+  background: #ffffff;
+  border: 1px solid #e8ebf2;
+  border-radius: 16px;
+  box-shadow: 0 5px 20px rgba(20, 35, 70, 0.04);
+  padding: 28px;
+}
+
+.form-card-header {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  padding-bottom: 22px;
+  border-bottom: 1px solid #edf0f5;
+  margin-bottom: 25px;
+}
+
+.header-icon {
+  width: 42px;
+  height: 42px;
+  border-radius: 11px;
+  background: #eef2ff;
+  color: #3155e7;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.form-card-header h2 {
+  margin: 0;
+  color: #172033;
+  font-size: 18px;
+}
+
+.form-card-header p {
+  margin: 4px 0 0;
+  color: #929aaa;
+  font-size: 13px;
+}
+
+
+/* FORM GRID */
+
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 22px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-group.full-width {
+  grid-column: 1 / -1;
+}
+
+.form-group label {
+  font-size: 13px;
+  font-weight: 650;
+  color: #30394d;
+}
+
+.form-group label span {
+  color: #a0a7b5;
+  font-weight: 400;
+}
+
+
+/* INPUTS */
+
+.input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.input-wrapper svg {
+  position: absolute;
+  left: 14px;
+  color: #929aaa;
+  pointer-events: none;
+}
+
+.input-wrapper input,
+.input-wrapper select,
+.form-group textarea {
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid #dfe3eb;
+  background: #fbfcfe;
+  border-radius: 10px;
+  color: #172033;
+  font-size: 14px;
+  outline: none;
+  transition: 0.2s;
+  font-family: inherit;
+}
+
+.input-wrapper input,
+.input-wrapper select {
+  height: 46px;
+  padding: 0 14px 0 42px;
+}
+
+.form-group textarea {
+  padding: 13px 14px;
+  resize: vertical;
+  min-height: 100px;
+}
+
+.input-wrapper input:focus,
+.input-wrapper select:focus,
+.form-group textarea:focus {
+  border-color: #3155e7;
+  background: #ffffff;
+  box-shadow: 0 0 0 3px rgba(49, 85, 231, 0.09);
+}
+
+.input-wrapper input::placeholder,
+.form-group textarea::placeholder {
+  color: #adb3bf;
+}
+
+
+/* BUTTONS */
+
+.form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.cancel-button,
+.save-expense-button {
+  height: 45px;
+  padding: 0 20px;
+  border-radius: 9px;
+  font-size: 14px;
+  font-weight: 650;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  cursor: pointer;
+  text-decoration: none;
+  font-family: inherit;
+}
+
+.cancel-button {
+  background: #ffffff;
+  color: #596276;
+  border: 1px solid #dfe3eb;
+}
+
+.cancel-button:hover {
+  background: #f7f8fb;
+}
+
+.save-expense-button {
+  background: #3155e7;
+  color: white;
+  border: none;
+  box-shadow: 0 4px 10px rgba(49, 85, 231, 0.2);
+}
+
+.save-expense-button:hover {
+  background: #2748cf;
+  transform: translateY(-1px);
+}
+
+
+/* RESPONSIVE */
+
+@media (max-width: 700px) {
+  .add-expense-page {
+    padding: 5px 0 30px;
+  }
+
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .form-group.full-width {
+    grid-column: auto;
+  }
+
+  .form-card {
+    padding: 20px;
+  }
+
+  .add-expense-header h1 {
+    font-size: 26px;
+  }
+
+  .form-actions {
+    flex-direction: column-reverse;
+  }
+
+  .cancel-button,
+  .save-expense-button {
+    width: 100%;
+  }
+}

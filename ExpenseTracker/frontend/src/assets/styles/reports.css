@@ -1,0 +1,192 @@
+/* =========================================
+   SPENDMATE - REPORTS
+   ========================================= */
+
+.reports-page {
+  padding: 32px;
+  background: #f6f8fc;
+  min-height: calc(100vh - 70px);
+}
+
+.reports-header {
+  margin-bottom: 26px;
+}
+
+.reports-header h1 {
+  margin: 0;
+  color: #172033;
+  font-size: 26px;
+  font-weight: 700;
+}
+
+.reports-header p {
+  margin: 6px 0 0;
+  color: #7d8798;
+  font-size: 13px;
+}
+
+/* SUMMARY */
+
+.reports-summary {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.report-summary-card {
+  padding: 20px;
+  background: #fff;
+  border: 1px solid #e7eaf0;
+  border-radius: 12px;
+  box-shadow: 0 3px 10px rgba(20, 30, 50, 0.035);
+}
+
+.report-summary-card span {
+  color: #7b8496;
+  font-size: 12px;
+}
+
+.report-summary-card h2 {
+  margin: 10px 0 5px;
+  color: #172033;
+  font-size: 22px;
+}
+
+.report-summary-card small {
+  color: #9aa2b1;
+  font-size: 10px;
+}
+
+.income-value {
+  color: #159570 !important;
+}
+
+.expense-value {
+  color: #e5484d !important;
+}
+
+/* CHART GRID */
+
+.reports-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+}
+
+.report-card {
+  min-width: 0;
+  background: #fff;
+  border: 1px solid #e7eaf0;
+  border-radius: 12px;
+  box-shadow: 0 3px 10px rgba(20, 30, 50, 0.035);
+}
+
+.report-card-wide {
+  grid-column: 1 / -1;
+}
+
+.report-card-header {
+  padding: 20px;
+  border-bottom: 1px solid #edf0f4;
+}
+
+.report-card-header h2 {
+  margin: 0;
+  color: #172033;
+  font-size: 15px;
+}
+
+.report-card-header p {
+  margin: 5px 0 0;
+  color: #929aaa;
+  font-size: 10px;
+}
+
+.chart-container {
+  height: 320px;
+  padding: 15px;
+}
+
+.chart-empty {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #929aaa;
+  font-size: 12px;
+}
+
+/* SMART INSIGHT */
+
+.smart-insight-card {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-top: 18px;
+  padding: 20px;
+  background: #eef2ff;
+  border: 1px solid #dbe2ff;
+  border-radius: 12px;
+}
+
+.smart-insight-icon {
+  width: 44px;
+  height: 44px;
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #fff;
+  border-radius: 10px;
+  font-size: 21px;
+}
+
+.smart-insight-card h2 {
+  margin: 0 0 5px;
+  color: #172033;
+  font-size: 15px;
+}
+
+.smart-insight-card p {
+  margin: 0;
+  color: #697386;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 1100px) {
+  .reports-summary {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .reports-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .report-card-wide {
+    grid-column: auto;
+  }
+}
+
+@media (max-width: 600px) {
+  .reports-page {
+    padding: 18px;
+  }
+
+  .reports-summary {
+    grid-template-columns: 1fr;
+  }
+
+  .chart-container {
+    height: 280px;
+  }
+
+  .smart-insight-card {
+    align-items: flex-start;
+  }
+}

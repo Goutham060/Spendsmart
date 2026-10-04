@@ -1,0 +1,24 @@
+.app-layout {
+  display: flex;
+  min-height: 100vh;
+  background: #f7f8fc;
+}
+
+.main-section {
+  flex: 1;
+  min-width: 0;
+  margin-left: 260px;
+  width: calc(100% - 260px);
+}
+
+.page-content {
+  padding: 24px;
+  box-sizing: border-box;
+}
+
+@media (max-width: 900px) {
+  .main-section {
+    margin-left: 0;
+    width: 100%;
+  }
+}
