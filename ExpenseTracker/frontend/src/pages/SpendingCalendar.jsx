@@ -5,6 +5,7 @@ import {
   ChevronRight,
   X,
 } from "lucide-react";
+import { API_BASE_URL } from "../services/api";
 
 import "../assets/styles/spendingCalendar.css";
 
@@ -51,7 +52,7 @@ function SpendingCalendar() {
       setLoading(true);
 
       const response = await fetch(
-        `http://localhost:8080/api/expenses?userId=${encodeURIComponent(
+        `${API_BASE_URL}/api/expenses?userId=${encodeURIComponent(
           user.id
         )}`,
         {

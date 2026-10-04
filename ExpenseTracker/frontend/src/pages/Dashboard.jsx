@@ -26,6 +26,7 @@ import {
 } from "lucide-react";
 
 import { useLanguage } from "../context/LanguageContext";
+import { API_BASE_URL } from "../services/api";
 
 import "../assets/styles/dashboard.css";
 
@@ -106,7 +107,7 @@ function Dashboard() {
         setExpenseError("");
 
         const response = await fetch(
-          `http://localhost:8080/api/expenses?userId=${currentUser.id}`,
+          `${API_BASE_URL}/api/expenses?userId=${currentUser.id}`,
           {
             method: "GET",
             cache: "no-store",

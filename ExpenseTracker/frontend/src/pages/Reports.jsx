@@ -17,6 +17,7 @@ import {
 
 import { useLanguage } from "../context/LanguageContext";
 import { getCategoryLabel } from "../utils/categoryUtils";
+import { API_BASE_URL } from "../services/api";
 
 import "../assets/styles/reports.css";
 
@@ -56,7 +57,7 @@ function Reports() {
       setLoadingExpenses(true);
 
       const response = await fetch(
-        `http://localhost:8080/api/expenses?userId=${user.id}`,
+        `${API_BASE_URL}/api/expenses?userId=${user.id}`,
         {
           method: "GET",
           cache: "no-store",

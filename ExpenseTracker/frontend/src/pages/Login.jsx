@@ -10,6 +10,7 @@ import {
 
 import { useLanguage } from "../context/LanguageContext";
 import LanguageSelector from "../components/LanguageSelector";
+import { API_BASE_URL } from "../services/api";
 
 import "../assets/styles/auth.css";
 
@@ -55,7 +56,7 @@ function Login() {
 
     try {
       const response = await fetch(
-        "http://localhost:8080/api/auth/login",
+        `${API_BASE_URL}/api/auth/login`,
         {
           method: "POST",
 

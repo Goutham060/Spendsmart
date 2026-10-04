@@ -25,6 +25,7 @@ import {
   getStoredCategories,
   getCategoryLabel,
 } from "../utils/categoryUtils";
+import { API_BASE_URL } from "../services/api";
 
 import "../assets/styles/budgets.css";
 
@@ -111,7 +112,7 @@ function Budgets() {
 
       const response =
         await fetch(
-          `http://localhost:8080/api/expenses?userId=${encodeURIComponent(
+          `${API_BASE_URL}/api/expenses?userId=${encodeURIComponent(
             user.id
           )}`,
           {

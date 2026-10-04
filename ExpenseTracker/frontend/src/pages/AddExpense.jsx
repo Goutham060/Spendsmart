@@ -8,6 +8,7 @@ import {
   getStoredCategories,
   getCategoryLabel,
 } from "../utils/categoryUtils";
+import { API_BASE_URL } from "../services/api";
 
 import "../assets/styles/addExpense.css";
 
@@ -175,7 +176,7 @@ function AddExpense() {
 
       const response =
         await fetch(
-          `http://localhost:8080/api/expenses?userId=${user.id}`,
+          `${API_BASE_URL}/api/expenses?userId=${user.id}`,
           {
             method: "POST",
 
